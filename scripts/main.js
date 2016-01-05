@@ -55,7 +55,7 @@ else {
         break;
       }
       operandPlace = 0;
-      operand = [0,0];
+      operand = [button,0];
   }
   else {
     operation = button; //store operation to be used when = button is pressed

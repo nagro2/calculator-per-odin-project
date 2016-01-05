@@ -27,7 +27,7 @@ function processButton(button) {
   }
 else {
 
-  if (button == 'clr' || (button == '=' && operandPlace = 0) ) {
+  if (button == 'clr' || (button == '=' && operandPlace == 0) ) {
     button = 0;
     operandPlace = 0;
     operand = [0,0];
@@ -54,8 +54,8 @@ else {
           } 
         break;
       }
-      operandPlace = 0;
-      operand = [0,0];
+      operandPlace = 1;
+      operand = [button,0];
   }
   else {
     operation = button; //store operation to be used when = button is pressed
