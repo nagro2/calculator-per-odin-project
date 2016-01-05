@@ -27,7 +27,7 @@ function processButton(button) {
   }
 else {
 
-  if (button == 'clr') {
+  if (button == 'clr' || (button == '=' && operandPlace == 0) ) {
     button = 0;
     operandPlace = 0;
     operand = [0,0];
@@ -84,6 +84,9 @@ bE.onclick = function() {
 
 bC.onclick = function() {
   processButton('clr');
+}
+b0.onclick = function() {
+  processButton(0);
 }
 b1.onclick = function() {
   processButton(1);
