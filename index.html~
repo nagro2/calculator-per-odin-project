@@ -7,7 +7,7 @@
     <link href="styles/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1 id='display' >Mozilla is cool</h1>
+    <h1 id='display' >0</h1>
 
     
 <button id='ba'>+</button><button id='b1'>1</button><button id='b2'>2</button><button id='b3'>3</button><br>
