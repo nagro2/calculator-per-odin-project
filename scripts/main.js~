@@ -14,51 +14,59 @@ var b7 = document.querySelector('#b7');
 var b8 = document.querySelector('#b8');
 var b9 = document.querySelector('#b9');
 var calculatorDisplay = document.querySelector('#display');
+var operand = [0,0];
 
-function displayNumber(number) {
-  calculatorDisplay.textContent = number; //'number'; //+ myName;
+function processButton(button) {
+  if (button >= 0 && button < 10) {
+    //operand[0] = operand[0] * 10 + number;
+    operand[0] = operand[0] * 10 + button;
+    calculatorDisplay.textContent = operand[0];
+  }
+else {
+  calculatorDisplay.textContent = button; //'number'; //+ myName;
+ }
 }
 
 bA.onclick = function() {
-  displayNumber('+');
+  processButton('+');
 }
 bS.onclick = function() {
-  displayNumber('-');
+  processButton('-');
 }
 bM.onclick = function() {
-  displayNumber('X');
+  processButton('X');
 }
 bD.onclick = function() {
-  displayNumber('/');
+  processButton('/');
 }
 b0.onclick = function() {
-  displayNumber('0');
+  processButton(0);
 }
 b1.onclick = function() {
-  displayNumber(1);
+  processButton(1);
 }
 b2.onclick = function() {
-  displayNumber(2);
+  processButton(2);
 }
 b3.onclick = function() {
-  displayNumber('3');
+  processButton(3);
 }
 b4.onclick = function() {
-  displayNumber('4');
+  processButton(4);
 }
 b5.onclick = function() {
-  displayNumber('5');
+  processButton(5);
 }
 b6
 .onclick = function() {
-  displayNumber('6');
+  processButton(6);
 }
 b7.onclick = function() {
-  displayNumber('7');
+  processButton(7);
 }
 b8.onclick = function() {
-  displayNumber('8');
+  processButton(8);
 }
 b9.onclick = function() {
-  displayNumber('9');
+  processButton(9);
 }
