@@ -41,7 +41,7 @@ h1 {
 }
 
 button {
-	width: 50px;	
+	width = 5px;	
 	font-size: 30px;
 	background-color: #3385FF;
 	color: #000033;
