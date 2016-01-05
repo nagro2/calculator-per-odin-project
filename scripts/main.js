@@ -14,6 +14,7 @@ var b7 = document.querySelector('#b7');
 var b8 = document.querySelector('#b8');
 var b9 = document.querySelector('#b9');
 var bE = document.querySelector('#be');
+var bC = document.querySelector('#bc');
 var calculatorDisplay = document.querySelector('#display');
 var operand = [0,0];
 var operandPlace = 0;
@@ -26,23 +27,35 @@ function processButton(button) {
   }
 else {
 
-  if (button == '=' || operandPlace > 1) {
+  if (button == 'clr') {
+    button = 0;
     operandPlace = 0;
-    operand = [0,0]
+    operand = [0,0];
+    }
+
+  else if (button == '=' || operandPlace > 1) {
+
     switch(operation){
       case '+':
-        button = 'add';
+        button = operand[0] + operand[1];
         break;
       case '-':
-        button = 'subtract';
+        button = operand[0] - operand[1];
         break;
       case 'X':
-        button = 'multiply';
+        button = operand[0] * operand[1];
         break;
       case '/':
-        button = 'divide';
+        if (operand[1] != 0) {
+            button = operand[0] / operand[1];
+          }
+          else {
+            button = 'div by 0 err';
+          } 
         break;
       }
+      operandPlace = 0;
+      operand = [0,0];
   }
   else {
     operation = button; //store operation to be used when = button is pressed
@@ -68,8 +81,9 @@ bD.onclick = function() {
 bE.onclick = function() {
   processButton('=');
 }
-b0.onclick = function() {
-  processButton(0);
+
+bC.onclick = function() {
+  processButton('clr');
 }
 b1.onclick = function() {
   processButton(1);
