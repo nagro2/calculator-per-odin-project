@@ -28,13 +28,13 @@ var  processButton = function(button) {
   }
 else {
 
-  if (button == 'clr' || (button == '=' && operandPlace == 0) ) {
+  if (button === 'clr' || (button === '=' && operandPlace === 0) ) {
     button = 0;
     operandPlace = 0;
     operand = [0,0];
     }
 
-  else if (button == '=' || operandPlace > 1) {
+  else if (button === '=' || operandPlace > 1) {
 
     switch(operation){
       case '+':
