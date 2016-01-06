@@ -20,7 +20,8 @@ var operand = [0,0];
 var operandPlace = 0;
 var operation;
 
-function processButton(button) {
+//function processButton(button) {
+var  processButton = function(button) {
   if (button >= 0 && button < 10) {
     operand[operandPlace] = operand[operandPlace] * 10 + button;
     calculatorDisplay.textContent = operand[operandPlace];
